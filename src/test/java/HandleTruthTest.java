@@ -7,12 +7,12 @@ import static org.junit.Assert.assertEquals;
 public class HandleTruthTest {
     @Test
     public void makeshiftTest() {
-        HandleTruth.wordCount("hello hello is it me your looking for");
+        HandleTruth.wordCount("hello hello my name is who");
     }
 
     @Test
     public void realTest() {
-        String[] input = {"test big TESTER", "hello hello your mom", "you are the coolest coolest", "hello hello hello is is is is it it me your looking for", "oh a womanizer you-are womanizer you-are womanizer you-are womanizer womanizer you-are womanizer you-are womanizer womanizer baby"};
+        String[] input = {"test big TESTER", "hello hello your mom", "you are the coolest cool cool coolest", "hello hello hello is is is is it it me your looking for", "oh a womanizer you-are womanizer you-are womanizer you-are womanizer womanizer you-are womanizer you-are womanizer womanizer baby"};
         List<TreeMap<Integer, Set<String>>> testCases = getExpectedCases();
 
         for (int i = 0; i < testCases.size(); i++) {
@@ -53,6 +53,8 @@ public class HandleTruthTest {
         Set<String> value4 = new HashSet<>();
         value3.add("coolest");
         value3.add("coolest");
+        value3.add("cool");
+        value3.add("cool");
         String array0[] = {"you", "are", "the"};
         for (String str : array0) {
             value4.add(str);
